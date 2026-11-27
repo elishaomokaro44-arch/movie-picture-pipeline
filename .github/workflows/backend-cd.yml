@@ -34,6 +34,8 @@ jobs:
         run: pip install pipenv
 
       - name: Install dependencies
+        env:
+          CFLAGS: -std=gnu17
         run: pipenv install --dev
 
       - name: Run linter (flake8)
@@ -55,6 +57,8 @@ jobs:
         run: pip install pipenv
 
       - name: Install dependencies
+        env:
+          CFLAGS: -std=gnu17
         run: pipenv install --dev
 
       - name: Run tests (pytest)
